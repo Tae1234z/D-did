@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TGAT AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Prompt,sans-serif;
+}
+
+body{
+
+background:#f5f7fb;
+
+color:#222;
+
+}
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:25px 60px;
+
+background:white;
+
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:bold;
+
+color:#2563eb;
+
+}
+
+.login{
+
+padding:10px 22px;
+
+border:none;
+
+background:#2563eb;
+
+color:white;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+header{
+
+text-align:center;
+
+padding:90px 20px;
+
+}
+
+header h1{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+}
+
+header p{
+
+font-size:22px;
+
+color:#666;
+
+}
+
+.start{
+
+margin-top:35px;
+
+padding:18px 50px;
+
+font-size:20px;
+
+border:none;
+
+background:#2563eb;
+
+color:white;
+
+border-radius:14px;
+
+cursor:pointer;
+
+}
+
+.dashboard{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+padding:40px;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:18px;
+
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.progress{
+
+height:18px;
+
+background:#ddd;
+
+border-radius:30px;
+
+margin:20px 0;
+
+overflow:hidden;
+
+}
+
+.bar{
+
+width:35%;
+
+height:100%;
+
+background:#22c55e;
+
+}
+
+.practice{
+
+padding:40px;
+
+}
+
+.practice h2{
+
+margin-bottom:25px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+}
+
+.practice-card{
+
+background:white;
+
+padding:45px;
+
+border-radius:18px;
+
+text-align:center;
+
+font-size:22px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.25s;
+
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+
+}
+
+.practice-card:hover{
+
+transform:translateY(-8px);
+
+background:#2563eb;
+
+color:white;
+
+}</style>
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+TGAT AI
+</div>
+
+<div class="menu">
+
+<button class="login">
+Login
+</button>
+
+</div>
+
+</nav>
+
+<header>
+
+<h1>
+Practice Smarter.
+</h1>
+
+<p>
+AI สร้างข้อสอบใหม่ทุกครั้ง
+จากรูปแบบข้อสอบ TGAT
+</p>
+
+<button class="start">
+เริ่มฝึกเลย
+</button>
+
+</header>
+
+<section class="dashboard">
+
+<div class="card">
+
+<h2>Today's Goal</h2>
+
+<div class="progress">
+
+<div class="bar"></div>
+
+</div>
+
+<p>0 / 20 Questions</p>
+
+</div>
+
+<div class="card">
+
+<h2>Weak Skills</h2>
+
+<ul>
+
+<li>Grammar</li>
+
+<li>Vocabulary</li>
+
+<li>Reading</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<section class="practice">
+
+<h2>Practice</h2>
+
+<div class="grid">
+
+<div class="practice-card">
+
+Conversation
+
+</div>
+
+<div class="practice-card">
+
+Grammar
+
+</div>
+
+<div class="practice-card">
+
+Vocabulary
+
+</div>
+div class="practice-card">
+
+Reading
+
+</div>
+
+<div class="practice-card">
+
+Mixed Practice
+
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js">const cards=document.querySelectorAll(".practice-card");
+
+cards.forEach(card=>{
+
+card.onclick=()=>{
+
+alert(card.innerText+" จะเปิดใน Part 2");
+
+}
+
+})
+
+document.querySelector(".start").onclick=()=>{
+
+window.scrollTo({
+
+top:700,
+
+behavior:"smooth"
+
+})
+
+}</script>
+
+</body>
+</html>
